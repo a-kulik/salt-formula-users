@@ -1,0 +1,10 @@
+{% set users = salt['grains.filter_by']({
+  'Debian': {
+    'sudo_package': 'sudo'
+  },
+  'RedHat': {
+    'sudo_package': 'sudo'
+  },
+},grain='os_family', merge=salt['pillar.get']('user')) %}
+
+
