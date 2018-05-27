@@ -8,30 +8,6 @@ Places public keys in the authorized_keys file. The privileged keys are copied t
 
 users
 
-
-## pillar example
-
-user:
-
-   username:
-     home: /home/username
-     sudo: true
-     groups:
-      - adm
-     gid: 2323
-     uid: 1111
-     ssh_pub:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDH2Zm1JYlRq9svXkA4gr+RQtbAm4AZxBAC5tt+DXcpKLOVAUQQhl$
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDH2Zm1JYlRq9svXkA4gr+RQtbAm4AZxBAC5tt+DXcpKLOVAUQQhl$
-     ssh_privat:
-      - salt://tests/ubuntu.pub
-
-   username2:
-     home: /home/username2
-
-user_absent:
-  - username-del
-
 ## additional information
 
 - If you want to use sudo without a password, you need to use the following value "sudo: true".
