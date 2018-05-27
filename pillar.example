@@ -1,0 +1,22 @@
+## pillar example
+
+user:
+
+   username:
+     home: /home/username
+     sudo: true
+     groups:
+      - adm
+     gid: 2323
+     uid: 1111
+     ssh_pub:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDH2Zm1JYlRq9svXkA...
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDH2Zm1JYlRq9svXkA...
+     ssh_privat:
+      - salt://tests/ubuntu.pub
+
+   username2:
+     home: /home/username2
+
+user_absent:
+  - username-del
